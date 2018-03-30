@@ -1,0 +1,15 @@
+{
+  "name": "test-used",
+  "version": "1.0.0",
+  "description": "warn user about unused dependencies",
+  "bin": {
+    "testUsed": "index.js"
+  },
+  "keywords": [],
+  "author": "Asad Razvi",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "2.3.2",
+    "npm-check": "5.6.0"
+  }
+}
