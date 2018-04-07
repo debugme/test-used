@@ -1,9 +1,28 @@
 {
   "name": "test-used",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "warn user about unused dependencies",
+  "engines": {
+    "node": "8.10.0",
+    "npm": "5.6.0"
+  },
+  "scripts": {
+    "prepublish": "babel source --out-dir builds"
+  },
   "bin": {
-    "testUsed": "index.js"
+    "testUsed": "builds/index.js"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "8.10.0"
+          }
+        }
+      ]
+    ]
   },
   "keywords": [],
   "author": "Asad Razvi",
@@ -11,5 +30,9 @@
   "dependencies": {
     "chalk": "2.3.2",
     "npm-check": "5.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.6.1"
   }
 }
