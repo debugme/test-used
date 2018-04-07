@@ -13,15 +13,15 @@ npmCheck()
   .then((infoList) => {
     const messageList = infoList.map((info) => {
       const { moduleName, installed } = info
-      const message = `😕  Warning: Dependency ${moduleName} (${installed}) is not used.`
+      const message = `😕  Error: Dependency ${moduleName} (${installed}) should be deleted or defined as a DevDependency instead.`
       return message
     })
     return messageList
   })
   .then((messageList) => {
-    const formattedList = messageList.map((message) => chalk.yellowBright(message))
+    const formattedList = messageList.map((message) => chalk.redBright(message))
     const message = formattedList.join('\n')
-    console.warn(message)
+    console.error(message)
     process.exit(1)
   })
 

@@ -1,6 +1,6 @@
 {
   "name": "test-used",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "warn user about unused dependencies",
   "engines": {
     "node": "8.10.0",
